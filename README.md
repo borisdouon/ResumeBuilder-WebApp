@@ -39,6 +39,17 @@ ResumeAI is a comprehensive resume building platform that enables users to:
 
 ## 📸 Screenshots & Features
 
+### Landing Page
+![Landing Page](public/screenshots/landing-page.png)
+*AI-Powered Resume Builder with modern, professional interface*
+
+### Resume Editor
+![Resume Editor](public/screenshots/editor-view.png)
+*Split-panel editor with real-time preview and comprehensive form controls*
+
+### Add Section Modal
+*Feature-rich modal for adding custom sections to your resume*
+
 ### Main Features Showcase
 
 #### 🎨 Modern Interface

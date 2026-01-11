@@ -6,7 +6,7 @@ import { DndContext, closestCenter, DragEndEvent } from '@dnd-kit/core';
 import { SortableContext, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Input, Button, Textarea } from '@/components/ui';
+import { Input, Button, Textarea, DatePicker } from '@/components/ui';
 import { useResumeStore } from '@/store/useResumeStore';
 import { Experience } from '@/types/resume';
 import SectionWrapper, { DragHandle } from './SectionWrapper';
@@ -123,16 +123,14 @@ function ExperienceItem({ experience, index }: { experience: Experience; index: 
               />
 
               <div className="grid grid-cols-2 gap-4">
-                <Input
+                <DatePicker
                   label="Start Date"
-                  type="month"
                   value={experience.startDate}
                   onChange={(e) => updateExperience(experience.id, { startDate: e.target.value })}
                 />
                 <div>
-                  <Input
+                  <DatePicker
                     label="End Date"
-                    type="month"
                     value={experience.endDate || ''}
                     disabled={experience.current}
                     onChange={(e) => updateExperience(experience.id, { endDate: e.target.value })}

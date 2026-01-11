@@ -256,8 +256,8 @@ export default function ImportResumeDialog({
                     }}
                     className={cn(
                       'group relative p-4 sm:p-6 rounded-xl border-2 border-gray-200',
-                      'transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-blue-400',
-                      'bg-white text-left'
+                      'hover:shadow-lg hover:border-blue-400',
+                      'bg-white text-left cursor-pointer'
                     )}
                   >
                     <div className={cn(

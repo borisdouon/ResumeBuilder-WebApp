@@ -6,7 +6,7 @@ import { DndContext, closestCenter, DragEndEvent } from '@dnd-kit/core';
 import { SortableContext, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Input, Button, Textarea } from '@/components/ui';
+import { Input, Button, Textarea, DatePicker } from '@/components/ui';
 import { useResumeStore } from '@/store/useResumeStore';
 import { Education } from '@/types/resume';
 import SectionWrapper, { DragHandle } from './SectionWrapper';
@@ -136,18 +136,16 @@ function EducationItem({ education, index }: { education: Education; index: numb
               />
 
               <div className="grid grid-cols-2 gap-4">
-                <Input
+                <DatePicker
                   label="Start Date"
-                  type="month"
                   value={education.startDate}
                   onChange={(e) =>
                     updateEducation(education.id, { startDate: e.target.value })
                   }
                 />
                 <div>
-                  <Input
+                  <DatePicker
                     label="End Date"
-                    type="month"
                     value={education.endDate || ''}
                     disabled={education.current}
                     onChange={(e) =>

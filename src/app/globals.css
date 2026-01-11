@@ -5,15 +5,120 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/* Cursor styles for interactive elements */
+button, 
+input[type="button"], 
+input[type="submit"], 
+a,
+[role="button"],
+[role="link"],
+.cursor-pointer,
+div[onclick],
+span[onclick],
+li[onclick],
+td[onclick],
+tr[onclick] {
+  cursor: pointer !important;
+}
+
+/* Ensure all clickable elements have pointer cursor */
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+a:hover,
+[role="button"]:hover,
+[role="link"]:hover,
+div[onclick]:hover,
+span[onclick]:hover,
+li[onclick]:hover,
+td[onclick]:hover,
+tr[onclick]:hover {
+  cursor: pointer !important;
+}
+
+/* Fix for any elements with onclick handlers */
+[onclick],
+[onClick] {
+  cursor: pointer !important;
+}
+
+/* Ensure buttons maintain cursor even when disabled */
+button:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled {
+  cursor: not-allowed !important;
+}
+
+
+/* Additional fixes for common clickable patterns */
+.clickable,
+[data-clickable],
+[data-action],
+[data-onclick] {
+  cursor: pointer !important;
+}
+
+/* Fix for dropdown menus and interactive elements */
+.dropdown-item,
+.menu-item,
+.option-item,
+.select-option {
+  cursor: pointer !important;
+}
+
+/* Ensure all interactive elements in the app have proper cursor */
+[class*="button"],
+[class*="Button"],
+[class*="btn"],
+[class*="Btn"],
+[class*="click"],
+[class*="action"],
+[class*="link"],
+[class*="menu"],
+[class*="dropdown"],
+[class*="select"],
+[class*="option"],
+[class*="tab"],
+[class*="nav"] {
+  cursor: pointer !important;
+}
+
+/* Fix for any element that might be clickable but not covered above */
+div:hover,
+span:hover,
+li:hover,
+td:hover,
+tr:hover,
+section:hover,
+article:hover,
+nav:hover,
+header:hover,
+footer:hover {
+  cursor: pointer !important;
+}
+
+/* Override any elements that should not have pointer cursor */
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):hover,
+textarea:hover,
+select:hover,
+[contenteditable="true"]:hover,
+[readonly]:hover,
+[disabled]:hover {
+  cursor: text !important;
+}
+
+input[readonly]:hover,
+textarea[readonly]:hover,
+select[disabled]:hover,
+input[disabled]:hover,
+textarea[disabled]:hover,
+button[disabled]:hover {
+  cursor: not-allowed !important;
 }
 
 /* Custom scrollbar */
