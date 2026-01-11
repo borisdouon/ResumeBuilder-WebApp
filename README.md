@@ -1,36 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ResumeAI - Professional Resume Builder
+
+A modern, production-ready resume builder web application built with Next.js 16 and Firebase. Features a real-time preview editor similar to Resume.io and Enhancv.
+
+## Features
+
+- **Two-Panel Editor** - Edit on the left, preview in real-time on the right
+- **Drag & Drop Sections** - Reorder resume sections with intuitive drag-and-drop
+- **Real-Time Preview** - See changes instantly as you type
+- **Auto-Save** - Never lose your work with automatic saving
+- **Firebase Auth** - Secure authentication with email/password and Google sign-in
+- **Dashboard** - Manage multiple resumes with CRUD operations
+- **ATS-Friendly Template** - Professional, clean design that passes ATS scans
+- **Responsive Design** - Works on desktop and mobile devices
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: Zustand
+- **Database**: Firebase Firestore
+- **Authentication**: Firebase Auth
+- **Animations**: Framer Motion
+- **Drag & Drop**: @dnd-kit
+- **Icons**: Lucide React
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+- Firebase project
+
+### Installation
+
+1. Clone the repository and install dependencies:
+
+```bash
+cd resume-builder
+npm install
+```
+
+2. Set up Firebase:
+   - Create a new Firebase project at [Firebase Console](https://console.firebase.google.com)
+   - Enable Authentication (Email/Password and Google providers)
+   - Create a Firestore database
+   - Copy your Firebase config
+
+3. Configure environment variables:
+
+```bash
+cp env.example .env.local
+```
+
+Edit `.env.local` with your Firebase credentials:
+
+```
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+```
+
+4. Set up Firestore security rules:
+
+```javascript
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    match /resumes/{resumeId} {
+      allow read, write: if request.auth != null 
+        && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null;
+    }
+  }
+}
+```
+
+5. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── (auth)/            # Auth pages (login, signup)
+│   ├── dashboard/         # Protected dashboard routes
+│   ├── resume-builder/    # Public resume builder
+│   └── page.tsx           # Landing page
+├── components/
+│   ├── editor/            # Resume editor components
+│   ├── preview/           # Preview panel components
+│   ├── templates/         # Resume templates
+│   ├── layout/            # Layout components
+│   └── ui/                # Reusable UI components
+├── hooks/                 # Custom React hooks
+├── lib/                   # Utilities and Firebase config
+├── store/                 # Zustand stores
+└── types/                 # TypeScript types
+```
 
-## Learn More
+## Routes
 
-To learn more about Next.js, take a look at the following resources:
+| Route | Description |
+|-------|-------------|
+| `/` | Landing page |
+| `/login` | Sign in page |
+| `/signup` | Create account page |
+| `/resume-builder` | Public resume builder (no save) |
+| `/dashboard` | User's resumes list |
+| `/dashboard/resume/[id]` | Edit specific resume |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Future Enhancements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [ ] Multiple resume templates
+- [ ] PDF export
+- [ ] AI writing assistance
+- [ ] Resume sharing with public links
+- [ ] Import from LinkedIn
+- [ ] Cover letter builder
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy is using [Vercel](https://vercel.com):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+## License
+
+MIT License
