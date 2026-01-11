@@ -7,6 +7,20 @@
 
 A cutting-edge, AI-powered resume builder web application that transforms the way professionals create and manage their resumes. Built with modern web technologies and featuring real-time preview, drag-and-drop editing, and intelligent AI assistance.
 
+## 👨‍💻 Author & Developer
+
+**BORIS DOUON** - AI Software Engineer
+
+🚀 **Ready to collaborate and help you build your SaaS!**  
+I'm passionate about building innovative AI-powered applications and helping entrepreneurs and developers create successful SaaS products. Let's connect and build something amazing together!
+
+📱 **Contact me for collaborations:**
+- 📧 **LinkedIn**: [boris-douon](https://www.linkedin.com/in/boris-douon/)
+- 💬 **WhatsApp**: +225 07 88 23 36 47
+- 🤝 **Open to collaborations**: Let's build your SaaS and get wealthy together!
+
+---
+
 ## 🌟 Live Demo
 
 **Coming Soon** - Deploying to Vercel
@@ -379,6 +393,19 @@ If you find this project helpful, please give it a ⭐ on GitHub! It helps other
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+
+## 👨‍💻 About the Author
+
+**BORIS DOUON** - AI Software Engineer
+
+🚀 **Ready to collaborate and help you build your SaaS!**  
+I'm passionate about building innovative AI-powered applications and helping entrepreneurs and developers create successful SaaS products. Let's connect and build something amazing together!
+
+📱 **Contact me for collaborations:**
+- 📧 **LinkedIn**: [boris-douon](https://www.linkedin.com/in/boris-douon/)
+- 💬 **WhatsApp**: +225 07 88 23 36 47
+- 📧 **Email**: contact@borisdouon.com
+- 🤝 **Open to collaborations**: Let's build your SaaS and get wealthy together!
 
 *Built with ❤️ and cutting-edge AI technology by BORIS DOUON*
 
