@@ -2,6 +2,20 @@
 
 A modern, production-ready resume builder web application built with Next.js 16 and Firebase. Features a real-time preview editor similar to Resume.io and Enhancv.
 
+## 👨‍💻 Author & Developer
+
+**BORIS DOUON** - AI Software Engineer
+
+🚀 **Ready to collaborate and help you build your SaaS!**  
+I'm passionate about building innovative AI-powered applications and helping entrepreneurs and developers create successful SaaS products. Let's connect and build something amazing together!
+
+📱 **Contact me for collaborations:**
+- 📧 **LinkedIn**: [boris-douon](https://www.linkedin.com/in/boris-douon/)
+- 💬 **WhatsApp**: +225 07 88 23 36 47
+- 🤝 **Open to collaborations**: Let's build your SaaS and get wealthy together!
+
+---
+
 ## Features
 
 - **Two-Panel Editor** - Edit on the left, preview in real-time on the right
@@ -123,14 +137,22 @@ src/
 | `/dashboard` | User's resumes list |
 | `/dashboard/resume/[id]` | Edit specific resume |
 
-## Future Enhancements
+## ✨ Features Implemented
 
-- [ ] Multiple resume templates
-- [ ] PDF export
-- [ ] AI writing assistance
-- [ ] Resume sharing with public links
-- [ ] Import from LinkedIn
+- [x] Multiple resume templates (Modern, Classic)
+- [x] PDF export with high-quality rendering
+- [x] AI writing assistance with Google Gemini
+- [x] PDF import with text extraction
+- [x] Resume sharing capabilities
+- [x] Import from LinkedIn (planned)
+
+## 🚀 Future Enhancements
+
 - [ ] Cover letter builder
+- [ ] More advanced AI features
+- [ ] Team collaboration features
+- [ ] Analytics dashboard
+- [ ] Custom domain support
 
 ## Deploy on Vercel
 
@@ -141,3 +163,19 @@ The easiest way to deploy is using [Vercel](https://vercel.com):
 ## License
 
 MIT License
+
+---
+
+## 👨‍💻 About the Author
+
+**BORIS DOUON** - AI Software Engineer
+
+🚀 **Ready to collaborate and help you build your SaaS!**  
+I'm passionate about building innovative AI-powered applications and helping entrepreneurs and developers create successful SaaS products. Let's connect and build something amazing together!
+
+📱 **Contact me for collaborations:**
+- 📧 **LinkedIn**: [boris-douon](https://www.linkedin.com/in/boris-douon/)
+- 💬 **WhatsApp**: +225 07 88 23 36 47
+- 🤝 **Open to collaborations**: Let's build your SaaS and get wealthy together!
+
+*Built with ❤️ and cutting-edge AI technology*
