@@ -48,6 +48,7 @@ ResumeAI is a comprehensive resume building platform that enables users to:
 *Split-panel editor with real-time preview and comprehensive form controls*
 
 ### Add Section Modal
+![Add Section Modal](public/screenshots/add-section-modal.png)
 *Feature-rich modal for adding custom sections to your resume*
 
 ### Main Features Showcase
